@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "Raleway", sans-serif;
   src: url("./fonts/Raleway-VariableFont_wght.ttf");
@@ -14,7 +7,7 @@
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/lato-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/lato-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* lato-700 - latin */
 @font-face {
@@ -22,8 +15,15 @@
   font-family: "Lato";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/lato-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/lato-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 html,
 body {
   height: 100%;
@@ -70,17 +70,27 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-family: "Lato";
+  font-family: "Lato" !important;
 }
 .hero {
   background-color: #282b22;
 }
 .hero {
   width: 100%;
-  height: 680px;
-  background-image: url("./images/back.png");
+  padding-top: 120px;
+  padding-bottom: 45px;
+  background-image: url("../images/back.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 }
 .hero__container {
   display: flex;
@@ -90,7 +100,7 @@ body {
   border-bottom: 1px solid #fff;
   padding-top: 120px;
   padding-bottom: 320px;
-
+  z-index: 5;
   h1 {
     color: #fff;
     text-align: center;
@@ -101,12 +111,13 @@ body {
     line-height: 120%; /* 67.2px */
     text-transform: uppercase;
     margin-bottom: 20px;
+    z-index: 1;
   }
   p {
     width: 537px;
     color: #fff;
     text-align: center;
-
+    z-index: 1;
     margin-bottom: 50px;
 
     font-size: 18px;
@@ -115,6 +126,7 @@ body {
     line-height: 150%; /* 27px */
   }
   a {
+    z-index: 1;
     color: #fff;
     font-size: 16px;
     font-style: normal;
@@ -227,19 +239,19 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    .b-tex{
+    .b-tex {
       border-right: 1px solid #e4d1d1;
       border-top: 1px solid #e4d1d1;
       border-bottom: 1px solid #e4d1d1;
       padding-right: 60px;
     }
-    .c-tex{
+    .c-tex {
       border-left: 1px solid #e4d1d1;
       border-top: 1px solid #e4d1d1;
       border-bottom: 1px solid #e4d1d1;
       padding-left: 60px;
     }
-    .left-text{
+    .left-text {
       display: flex;
       align-items: center;
       gap: 15px;
@@ -247,7 +259,7 @@ body {
       padding-bottom: 35px;
     }
     h2 {
-      color:  #282b22;
+      color: #282b22;
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -255,7 +267,7 @@ body {
       width: 370px;
     }
   }
-  .pos-img{
+  .pos-img {
     position: absolute;
     right: -105px;
     top: -75px;
