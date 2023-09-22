@@ -21,7 +21,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 html,
@@ -104,7 +103,7 @@ body {
   h1 {
     color: #fff;
     text-align: center;
-    font-family: "Lato";
+    font-family: "Lato" !important;
     font-size: 56px;
     font-style: normal;
     font-weight: 700;
@@ -190,6 +189,7 @@ body {
   margin-top: 140px;
   padding-top: 100px;
   padding-bottom: 100px;
+
   h1 {
     color: #fff;
     text-align: center;
@@ -272,5 +272,231 @@ body {
     position: absolute;
     right: -105px;
     top: -75px;
+  }
+}
+
+@media screen and  (max-width: 1200px) {
+  .body__container {
+    h1 {
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+    .cards {
+      gap: 20px;
+      .card {
+        p {
+          font-size: 20px;
+          margin-bottom: 40px;
+        }
+        h2 {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  /* 1200px gacha o'lchamdagi ekranlar uchun o'zgarishlar */
+  .mebel {
+    margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    h1 {
+      font-size: 36px;
+      line-height: 115%; /* 41.4px */
+      margin-bottom: 50px;
+    }
+    span p {
+      font-size: 20px;
+      line-height: 120%; /* 24px */
+    }
+  }
+  .grid {
+    grid-template-columns: auto auto;
+    column-gap: 70px;
+    row-gap: 50px;
+  }
+  .text {
+    margin-top: 80px;
+    h1 {
+      font-size: 30px;
+      line-height: 120%; /* 36px */
+      width: 600px;
+    }
+    .kolleg h2 {
+      font-size: 16px;
+      line-height: 140%; /* 22.4px */
+      width: 330px;
+    }
+  }
+}
+@media screen and  (max-width: 1000px) {
+
+  /* 1000px gacha o'lchamdagi ekranlar uchun o'zgarishlar */
+  .mebel {
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    h1 {
+      font-size: 32px;
+      line-height: 110%; /* 35.2px */
+      margin-bottom: 40px;
+    }
+    span p {
+      font-size: 18px;
+      line-height: 120%; /* 21.6px */
+    }
+  }
+  .grid {
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 40px;
+  }
+  .text {
+    margin-top: 60px;
+    h1 {
+      font-size: 28px;
+      line-height: 120%; /* 33.6px */
+      width: 500px;
+    }
+    .kolleg h2 {
+      font-size: 14px;
+      line-height: 130%; /* 18.2px */
+      width: 290px;
+    }
+  }
+}
+
+@media screen and  (max-width: 640px) {
+  .hero__container {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    h1 {
+      font-size: 32px;
+      line-height: 100%; /* 32px */
+    }
+    p {
+      font-size: 16px;
+      line-height: 150%; /* 24px */
+    }
+    a {
+      padding: 16px 40px;
+      font-size: 14px;
+    }
+  }
+  .body__container {
+    .cards{
+      display: grid;
+      
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    .cards {
+      gap: 10px;
+      .card {
+        p {
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+        h2 {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  /* 640px gacha o'lchamdagi ekranlar uchun o'zgarishlar */
+  .mebel {
+    margin-top: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h1 {
+      font-size: 28px;
+      line-height: 105%; /* 29.4px */
+      margin-bottom: 30px;
+    }
+    span p {
+      font-size: 16px;
+      line-height: 110%; /* 17.6px */
+    }
+  }
+  .grid {
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+  .img-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .text {
+    margin-top: 40px;
+    h1 {
+      font-size: 18px;
+      line-height: 110%; /* 26.4px */
+      width: 290px;
+    }
+    .kolleg h2 {
+      font-size: 12px;
+      line-height: 120%; /* 14.4px */
+      width: 250px;
+    }
+  }
+  .kolleg {
+    padding-bottom: 40px;
+   flex-direction: column;
+    .b-tex,
+    .c-tex {
+      border: none;
+      padding: 0;
+    }
+
+    .left-text {
+      padding: 10px 0;
+    }
+
+    h2 {
+      font-size: 16px;
+      line-height: 120%; /* 19.2px */
+    }
+  }
+
+  .pos-img {
+    display: none;
+  }
+}
+@media screen and  (max-width: 320px) {
+  /* 320px gacha o'lchamdagi ekranlar uchun o'zgarishlar */
+  .mebel {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1 {
+      font-size: 20px;
+      line-height: 100%; /* 20px */
+      margin-bottom: 20px;
+    }
+    span p {
+      font-size: 14px;
+      line-height: 100%; /* 14px */
+    }
+  }
+  .grid {
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+  .text {
+    margin-top: 30px;
   }
 }
